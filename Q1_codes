@@ -1,0 +1,7 @@
+0 0  0
+c0 0  0
+b0 a0 c0
+e0 b0 c0
+$ sed 's/ 0/ ./g' pedigree.txt > pedigree1.txt
+$ grep -w "." pedigree1.txt
+$ grep -v '\.' pedigree1.txt
