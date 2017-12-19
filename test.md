@@ -1,13 +1,13 @@
-* [remove leading spaces](#remove leading spaces)
-* [check number of columns (same)](#check number of columns (same))
-* [subtract phenotypes](#subtract phenotypes)
-* [recode genotypes](#recode genotypes)
-* [associated array](#associated array)
-* [bash for Julia scripts](#bash for Julia scripts)
+* [remove leading spaces](#remove_leading_spaces)
+* [check number of columns (same)](#check_number_of_columns)
+* [subtract phenotypes](#subtract_phenotypes)
+* [recode genotypes](#recode_genotypes)
+* [associated array](#associated_array)
+* [bash for Julia scripts](#bash_for_Julia_scripts)
 
 
 ### remove leading spaces
-<div id="remove leading spaces" />
+<div id="remove_leading_spaces" />
 
 ```awk
 #file (leading space before a,b,c)
@@ -19,7 +19,7 @@ awk 'BEGIN{OFS=" "}{$1=$1;print}' file
 ```
 
 ### check number of columns (same)
-<div id="check number of columns (same)" />
+<div id="check_number_of_columns" />
 
 ```awk
 #check number of columns
@@ -34,7 +34,7 @@ map.txt relation.txt
 ```
 
 ### subtract phenotypes
-<div id="subtract phenotypes" />
+<div id="subtract_phenotypes" />
 
 ```awk
 #PHENOTYPE, PEDIGREE AND FIXED EFFECTS
@@ -44,7 +44,7 @@ awk 'BEGIN{FS=","};NR==1{print $1,$2,$3,$5,$8}' $phenotypeFile > pheno.header
 ```
 
 ### recode genotypes
-<div id="recode genotypes" />
+<div id="recode_genotypes" />
 
 ```shell
 #/bin/bash/
@@ -60,7 +60,7 @@ echo "Header of the genotype file has been removed."
 ```
 
 ### associated array
-<div id="associated array" />
+<div id="associated_array" />
 
 ```awk
 #print match lines without sorting link
@@ -76,7 +76,7 @@ awk '{a[$1]+=1}END{for (key in a)print key,a[key]}' data.txt
 ```
 
 ### bash for Julia scripts
-<div id="bash for Julia scripts" />
+<div id="bash_for_Julia_scripts" />
 
 ```shell
 #!/bin/bash
@@ -176,6 +176,7 @@ The examples presented below use either the wheat data sets provided with BGLR-R
 ```
 
 #### Examples
+  * [remove leading spaces](#remove leading spaces)
   * [Genomic BLUP](#GBLUP)
   * [Bayesian Ridge Regression](#BRR)
   * [Bayesian LASSO](#BL)
