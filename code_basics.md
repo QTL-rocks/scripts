@@ -103,6 +103,21 @@ u	show process of a user
 Space and F9	Kill Multiple Processes using Tag
 ```
 
+### tmux
+control+b                   #default prefix
+tmux new-window             #create a new window (prefix + c)
+tmux select-window -t :0-9  #move to the window based on index (prefix + 0-9)
+tmux rename-window          #rename the current window (prefix + ,) 
+
+tmux split-window           #splits the window into two vertical panes (prefix + ")
+tmux split-window -h        #splits the window into two horizontal panes (prefix + %)
+prefix + 0-9.               #move to panel 0-9
+
+tmux new -s session_name    #creates a new tmux session named session_name
+tmux attach -t session_name #attaches to an existing tmux session named session_name
+tmux list-sessions          #lists existing tmux sessions
+tmux detach (prefix + d)    #detach the currently attached session
+
 
 ## ASREML
 ### asreml
