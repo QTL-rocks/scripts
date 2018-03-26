@@ -6,6 +6,7 @@
 * [recode genotypes](#recode_genotypes)
 * [associated array](#associated_array)
 * [bash for Julia scripts](#bash_for_Julia_scripts)
+* [read multiple files](#read_files)
 
 
 ### remove leading spaces
@@ -136,3 +137,13 @@ done
 
 ```
 
+### read multiple files (julia)
+<div id="read_files" />
+
+```awk
+#make variable names
+filelist=["50","100","200","400","1000","2000","4000","7000"]
+prefix1  =PATH*"BayesC"
+suffix  =".txt"
+readdlm_expr(filelist,"a",prefix1,suffix)
+```
