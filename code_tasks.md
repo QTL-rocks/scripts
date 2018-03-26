@@ -142,6 +142,14 @@ done
 
 ```awk
 #make variable names
+function readdlm_expr(infiles,outvar,prefix="",suffix="")
+   for file in infiles
+     global filename  = prefix*file*suffix
+     global ex = Expr(:(=),Symbol(outvar,file),:(readdlm(filename))) 
+     eval(ex)
+   end
+end
+
 filelist=["50","100","200","400","1000","2000","4000","7000"]
 prefix1  =PATH*"BayesC"
 suffix  =".txt"
