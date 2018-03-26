@@ -64,6 +64,7 @@ title!("Trait 2 (heritability=0.8)",titlefont=font(12,"Courier"),subplot=2)
 
 #### line plots in ggplot2
 <div id="lineplot" />
+
 ```R
 #line plots
 #data
