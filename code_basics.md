@@ -15,6 +15,11 @@ rm IDs
 rm geno.temp
 ```
 
+### find
+```shell
+find /home/username/ -name "*.err"
+```
+
 ### zip
 ```shell
 #zip(package) a directory
@@ -63,6 +68,7 @@ awk 'BEGIN{FS=","}{NR>1; if($7==2)print $1}' trn_phens.csv|sort >trn.female.ID
 sort geno.file > geno.sorted
 join -v1 geno.sorted trn.male.ID > geno.male.train.rm
 ```
+
 
 
 # interactive tools
