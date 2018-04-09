@@ -1,5 +1,13 @@
 # command lines
 
+###chmod
+```shell
+#give execution permissions to everyone
+chmod a+x hello.sh
+#grant execution permissions to the owner of the file 
+chmod u+x hello.sh 
+```
+
 ### sed
 ```shell
 #replace 0 by dot ( . )
