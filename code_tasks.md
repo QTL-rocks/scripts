@@ -155,3 +155,11 @@ prefix1  =PATH*"BayesC"
 suffix  =".txt"
 readdlm_expr(filelist,"a",prefix1,suffix)
 ```
+
+### a
+
+```
+using $0 as $1,$2...$9 require reconstruction like $1=$1
+awk 'BEGIN{FS=",";OFS=" "}; NR==1{$1=$1;print $0}' phens_eblup.csv
+awk 'BEGIN{FS=",";OFS=" "}; NR==1{print $1,$2,$3,$4,$5,$6,$7,$8,$9}' phens_eblup.csv
+```
